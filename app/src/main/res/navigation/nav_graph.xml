@@ -39,7 +39,10 @@
         tools:layout="@layout/fragment_statistics">
         <action
             android:id="@+id/action_statisticsFragment_to_runFragment"
-            app:destination="@id/runFragment" />
+            app:destination="@id/runFragment"
+            app:popUpTo="@id/statisticsFragment"
+            app:popUpToInclusive="true" />
+
 
         <action
             android:id="@+id/action_statisticsFragment_to_trackingFragment"
@@ -55,7 +58,10 @@
             app:destination="@id/trackingFragment" />
         <action
             android:id="@+id/action_runFragment_to_statisticsFragment"
-            app:destination="@id/statisticsFragment"/>
+            app:destination="@id/statisticsFragment"
+            app:popUpTo="@id/runFragment"
+            app:popUpToInclusive="true" />
+
 
     </fragment>
 </navigation>
