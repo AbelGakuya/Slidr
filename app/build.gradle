@@ -11,14 +11,14 @@ plugins {
 }
 
 android {
-    namespace 'com.amg.run'
+    namespace 'com.slidr.stridr'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.amg.run"
+        applicationId "com.slidr.slidr"
         minSdk 24
         targetSdk 33
-        versionCode 4
+        versionCode 6
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

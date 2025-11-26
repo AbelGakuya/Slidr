@@ -11,7 +11,7 @@
 
     <fragment
         android:id="@+id/setupFragment"
-        android:name="com.amg.run.ui.fragments.SetupFragment"
+        android:name="com.slidr.slidr.ui.fragments.SetupFragment"
         android:label="fragment_setup"
         tools:layout="@layout/fragment_setup" >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/trackingFragment"
-        android:name="com.amg.run.ui.fragments.TrackingFragment"
+        android:name="com.slidr.slidr.ui.fragments.TrackingFragment"
         android:label="fragment_tracking"
         tools:layout="@layout/fragment_tracking" >
         <action
@@ -29,21 +29,33 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.amg.run.ui.fragments.SettingsFragment"
+        android:name="com.slidr.slidr.ui.fragments.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/statisticsFragment"
-        android:name="com.amg.run.ui.fragments.StatisticsFragment"
+        android:name="com.slidr.slidr.ui.fragments.StatisticsFragment"
         android:label="fragment_statistics"
-        tools:layout="@layout/fragment_statistics" />
+        tools:layout="@layout/fragment_statistics">
+        <action
+            android:id="@+id/action_statisticsFragment_to_runFragment"
+            app:destination="@id/runFragment" />
+
+        <action
+            android:id="@+id/action_statisticsFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
+    </fragment>
     <fragment
         android:id="@+id/runFragment"
-        android:name="com.amg.run.ui.fragments.RunFragment"
+        android:name="com.slidr.slidr.ui.fragments.RunFragment"
         android:label="fragment_run"
         tools:layout="@layout/fragment_run" >
         <action
             android:id="@+id/action_runFragment_to_trackingFragment"
             app:destination="@id/trackingFragment" />
+        <action
+            android:id="@+id/action_runFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment"/>
+
     </fragment>
 </navigation>
