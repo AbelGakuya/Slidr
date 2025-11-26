@@ -315,26 +315,39 @@ class TrackingFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         )
     }
 
-    private fun endRunAndSaveToDb(){
+    private fun endRunAndSaveToDb() {
         map?.snapshot { bmp ->
             var distanceInMeters = 0
-            for (polyline in pathPoints){
+            for (polyline in pathPoints) {
                 distanceInMeters += TrackingUtility.calculatePolylineLength(polyline).toInt()
             }
 
-            val avgSpeed = round((distanceInMeters / 1000f) / (curTimeInMillis / 1000f / 60 / 60) * 10) / 10f
+            val avgSpeed = round(
+                (distanceInMeters / 1000f) /
+                        (curTimeInMillis / 1000f / 60 / 60) * 10
+            ) / 10f
+
             val dateTimeStamp = Calendar.getInstance().timeInMillis
             val caloriesBurned = ((distanceInMeters / 1000f) * weight).toInt()
-            val run = Run(bmp, dateTimeStamp,avgSpeed,distanceInMeters,curTimeInMillis,caloriesBurned)
+
+            val run = Run(
+                bmp,
+                dateTimeStamp,
+                avgSpeed,
+                distanceInMeters,
+                curTimeInMillis,
+                caloriesBurned
+            )
+
             viewModel.insertRun(run)
-            Snackbar.make(
-                requireActivity().findViewById(R.id.rootView),
-                "Run saved successfully",
-                Snackbar.LENGTH_LONG
-            ).show()
+
+            // FIXED SNACKBAR
+            Snackbar.make(binding.root, "Run saved successfully", Snackbar.LENGTH_LONG).show()
+
             stopRun()
         }
     }
+
 
     private fun addAllPolyLines(){
         for (polyLine in pathPoints){

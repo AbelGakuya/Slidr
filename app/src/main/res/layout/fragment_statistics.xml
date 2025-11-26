@@ -113,6 +113,7 @@
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/customBottomNav"
         app:layout_constraintTop_toBottomOf="@+id/tvAverageSpeedInfo" />
 
     <!-- Custom Bottom Bar -->
@@ -122,79 +123,74 @@
         android:layout_height="70dp"
         android:orientation="horizontal"
         android:background="@color/surfaceColor"
-        android:paddingHorizontal="35dp"
+        android:elevation="10dp"
         android:gravity="center"
-        android:elevation="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Run -->
         <LinearLayout
             android:id="@+id/navRun"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-            <ImageView
-                android:src="@drawable/ic_run"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                app:tint="@color/textPrimary" />
-
-            <TextView
-                android:text="Runs"
-                android:textSize="12sp"
-                android:textColor="@color/textPrimary"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"/>
-        </LinearLayout>
-
-        <!-- Empty space for FAB cutout -->
-
-        <!-- Statistics -->
-
-        <LinearLayout
-            android:id="@+id/navFab"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabCenter"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/baseline_add_24"
-                android:elevation="8dp"
-                app:backgroundTint="@color/primaryColor"
-                app:tint="@android:color/white"/>
+            <ImageView
+                android:src="@drawable/ic_run"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                app:tint="@color/textPrimary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Runs"
+                android:textSize="12sp"
+                android:textColor="@color/textPrimary"/>
+
         </LinearLayout>
 
+        <!-- Center FAB -->
+        <LinearLayout
+            android:id="@+id/navFab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabCenter"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:src="@drawable/baseline_add_24"
+                app:backgroundTint="@color/primaryColor"
+                app:tint="@android:color/white"
+                android:elevation="8dp"/>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/navStats"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:orientation="vertical">
 
             <ImageView
                 android:src="@drawable/ic_graph"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                app:tint="@color/textPrimary" />
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                app:tint="@color/textPrimary"/>
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Stats"
                 android:textSize="12sp"
-                android:textColor="@color/textPrimary"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"/>
+                android:textColor="@color/textPrimary" />
+
         </LinearLayout>
 
     </LinearLayout>
