@@ -14,9 +14,13 @@
             android:id="@+id/toolbar"
             android:layout_width="0dp"
             android:layout_height="?attr/actionBarSize"
+            android:background="@color/primaryColor"
+            app:titleTextColor="@android:color/white"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+
+
 
         <!-- REAL NAVHOSTFRAGMENT (Fixes the crash) -->
         <androidx.fragment.app.FragmentContainerView

@@ -2,7 +2,7 @@
 <resources>
     <!-- Primary -->
     <color name="primaryColor">#2979FF</color>          <!-- Electric Blue -->
-    <color name="primaryDarkColor">#0039CB</color>
+    <color name="primaryDarkColor">#2979FF</color>
     <color name="secondaryColor">#4FC3F7</color>
     <color name="accentColor">#82B1FF</color>
 
