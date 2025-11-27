@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.slidr.stridr.R
 import com.slidr.slidr.other.Constants.KEY_NAME
 import com.slidr.slidr.other.Constants.KEY_WEIGHT
@@ -70,8 +71,11 @@ class SettingsFragment : Fragment() {
             .apply()
 
         val toolbarText = "Let's go, $name!"
-        val toolbar = requireActivity().findViewById<com.google.android.material.appbar.MaterialToolbar>(R.id.toolbar)
-        toolbar.title = toolbarText
+
+// Find the TextView inside the toolbar
+        val toolbarTitle = requireActivity().findViewById<TextView>(R.id.toolbar_title)
+        toolbarTitle.text = toolbarText
+
 
         return true
     }

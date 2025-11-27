@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <!-- Blue background rounded square -->
+    <path
+        android:fillColor="#0039CB"
+        android:pathData="M128,0h256c70,0 128,58 128,128v256c0,70 -58,128 -128,128H128c-70,0 -128,-58 -128,-128V128C0,58 58,0 128,0z"/>
+
+    <!-- White running person -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M330,140c0,-33 -27,-60 -60,-60 -33,0 -60,27 -60,60 0,33 27,60 60,60 33,0 60,-27 60,-60zM225,420l25,-90 60,50 35,90c5,12 20,18 32,12 12,-5 18,-20 12,-32l-40,-100c-3,-8 -8,-14 -15,-19l-50,-40 15,-60 45,20c10,4 22,-1 26,-11 4,-10 -1,-22 -11,-26l-70,-30c-10,-4 -22,1 -26,11l-20,80 -70,110c-7,11 -4,25 7,32 11,7 25,4 32,-7l45,-70 -20,80c-3,13 5,26 18,29 13,3 26,-5 29,-18z"/>
+</vector>

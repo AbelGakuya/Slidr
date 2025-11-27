@@ -18,7 +18,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="Stridr"
+        android:label="Velo"
         android:supportsRtl="true"
         android:theme="@style/Theme.RunApp"
         tools:targetApi="31">

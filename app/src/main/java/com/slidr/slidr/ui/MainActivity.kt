@@ -32,6 +32,11 @@ class MainActivity : AppCompatActivity() {
 
         // Set toolbar
         setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+// Change the title programmatically
+        binding.toolbarTitle.text = "Velo"
+
 
         // Correct NavHostFragment initialization
         val navHostFragment =

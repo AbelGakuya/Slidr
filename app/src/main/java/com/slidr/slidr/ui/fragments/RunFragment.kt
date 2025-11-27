@@ -5,6 +5,9 @@ import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
@@ -119,6 +122,21 @@ class RunFragment : Fragment(), EasyPermissions.PermissionCallbacks {
        // showAppDisclosureDialog()
         requestPermissions()
         setupRecyclerView()
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_settings, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_settings -> {
+                findNavController().navigate(R.id.action_runFragment_to_settingsFragment)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
 
